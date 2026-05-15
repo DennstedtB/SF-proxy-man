@@ -1,22 +1,9 @@
-# Getting Started
+# SF Proxy Man
 
-Welcome to your new CAP project.
+A SAP Cloud Application Programming (CAP) application that acts as a proxy to the SAP SuccessFactors Role-Based Permissions (RBP) API. It fetches role assignments from SuccessFactors, compares the contained permissions against a locally maintained list of critical authorizations, and surfaces any matches.
 
-It contains these folders and files, following our recommended project layout:
+## What it does
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`readme.md` | this getting started guide
-
-## Next Steps
-
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start with your domain model, in a CDS file in `db/`
-
-## Learn More
-
-Learn more at <https://cap.cloud.sap>.
+1. **Fetches role data** from the SF RBP API (`getRoleById`) — including all `permIds` assigned to a role.
+2. **Compares** those `permIds` against a curated list of critical permissions stored in the local database.
+3. **Lists matches** — if a r
