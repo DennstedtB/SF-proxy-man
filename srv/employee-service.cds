@@ -1,5 +1,5 @@
-using { dio.sf.proxy as db } from '../db/schema';
+using { dio.sf.auth as db } from '../db/schema';
 
-service EmployeeService {
-    entity Employees as projection on db.employee;
+service AuthService {
+    entity CritAuth as projection on db.critAuthorizations;
 }

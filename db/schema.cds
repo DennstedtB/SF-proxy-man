@@ -1,7 +1,7 @@
-namespace dio.sf.proxy;
+namespace dio.sf.auth;
 
 using { cuid, managed } from '@sap/cds/common';
 
-entity employee : cuid, managed {
-  name : String
+entity critAuthorizations : cuid, managed {
+  
 }
